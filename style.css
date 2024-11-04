@@ -1,0 +1,182 @@
+/* Apply a full-screen background image */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('Websiteback.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Open Sans', sans-serif; /* Default font for body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the container to center the content */
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for text */
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    border: 2px solid white; /* Add white border */
+}
+
+/* Style for the heading */
+h1 {
+    font-family: 'Roboto', sans-serif; /* Use Roboto for the heading */
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #f9f2f2;
+}
+h2 {
+    font-family: 'Roboto', sans-serif; /* Use Roboto for the heading */
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #f9f2f2;
+}
+
+/* Style for the description */
+p {
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans for description */
+    font-size: 20px; /* Size */
+    margin-bottom: 30px; /* Spacing below the paragraph */
+    color: #faf8f8; /* Dark gray color for text */
+    line-height: 1.6; /* Increase line height for better readability */
+}
+
+/* Style for the input fields */
+input {
+    width: calc(100% - 150px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style for buttons */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #28a745; /* Initial background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+/* Change button color on hover */
+button:hover {
+    background-color: #218838; /* Darker green when hovered */
+    transform: scale(1.05); /* Slightly increase size for effect */
+}
+
+/* Style for options */
+.option {
+    display: flex; /* Use flex for the option div */
+    align-items: left; /* Align items vertically */
+    justify-content: left; /* Center items horizontally */
+    padding: 10px; /* Adjust padding as needed */
+    margin: 10px 0; /* Add vertical spacing between options */
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background-color: #ADD8E6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 30px; /* Adjust as needed */
+    width: 250px; /* Set a fixed width */
+}
+.options-container {
+    display: flex;
+    flex-direction: column; /* Stack options vertically */
+    align-items: center; /* Center options horizontally */
+    justify-content: center; /* Center options vertically if container height allows */
+}
+
+/* Add hover effect */
+.option:hover {
+    background-color: #e8b080; /* Change color on hover */
+}
+
+/* Selected option style */
+.option.selected {
+    background-color: #f7fafd; /* Change to desired color for selected option */
+    border-color: #b8daff; /* Change border color if needed */
+}
+
+/* Correct answer style */
+.option.correct {
+    background-color: #d4edda; /* Light green for correct answer */
+    border-color: #c3e6cb; /* Darker green for border */
+}
+
+/* Incorrect answer style */
+.option.incorrect {
+    background-color: #f8d7da; /* Light red for incorrect answer */
+    border-color: #f5c6cb; /* Darker red for border */
+}
+
+/* Label styles */
+label {
+    flex-grow: 1; /* Allow label to take remaining space */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 16px; /* Ensure label font size is consistent */
+}
+
+/* Input styles */
+input[type="radio"] {
+    margin-right: 3px; /* Space between radio button and label */
+}
+
+button {
+    margin-right: 30px; /* Space between buttons */
+}
+/* Remove margin from the last button */
+button:last-child {
+    margin-right: 0; 
+}
+
+
+#resultsContainer {
+    font-size: 10px; /* Reduce font size */
+    line-height: 1.4; /* Adjust line height for better readability */
+    padding: 10px; /* Add some padding */
+    margin: 0 auto; /* Center the content */
+    max-width: 600px; /* Limit the maximum width of the content */
+}
+
+#resultsContainer img {
+    max-width: 20%; /* Reduce the size of the GIF */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+#resultsContainer h2 {
+    font-size: 20px; /* Adjust score heading size */
+    margin-top: 20px; /* Add margin above the heading */
+}
+
+.container {
+    padding: 20px;
+    margin: 20px auto;
+}
+#resultsSection {
+    width: 100%; /* Full width */
+    /* Remove fixed height if any */
+}
+
+#resultsContainer {
+    margin-top: 20px; /* Space between title and results */
+    overflow-y: auto; /* Allow vertical scrolling if necessary */
+    max-height: 600px; /* Optional: limit the maximum height */
+}
+
+h1 {
+    font-size: 4em; /* Set your desired size for the title */
+    text-align: center; /* Center the title */
+}

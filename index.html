@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcome" class="container">
+        <h1>Online Quiz</h1>
+        <p>Test your knowledge with this fun and interactive quiz. Please fill out your details below to get started!</p>
+        <form id="userForm">
+            <input type="text" id="studentName" placeholder="Enter your student name" required>
+            <input type="text" id="batch" placeholder="Enter your batch" required>
+            <input type="number" id="sapId" placeholder="Enter your SAP ID" required>
+            <button type="submit">Start Quiz</button>
+        </form>
+    </div>
+
+    <div id="quizDetails" class="container" style="display: none;">
+        <h1>Student Details</h1>
+        <p><strong>Student Name:</strong> <span id="displayStudentName"></span></p>
+        <p><strong>Batch:</strong> <span id="displayBatch"></span></p>
+        <p><strong>SAP ID:</strong> <span id="displaySapId"></span></p>
+        
+        <button onclick="goBack()">Back to Home</button> 
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div id="instructionsSection" class="container" style="display: none;">
+        <h1>Instructions</h1>
+        <ul class="instructions-list">
+            <li>The quiz consists of 10 questions.</li>
+            <li>You have 60 seconds to complete each question.</li>
+            <li>Select the correct answer from the options provided.</li>
+            <li>You cannot go back to a previous question once it's submitted.</li>
+            <li>Your final score will be displayed at the end of the quiz.</li>
+        </ul>
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+    
+
+    <div id="quizSection" class="container" style="display: none;">
+        <h1>Quiz Section</h1>
+        <p id="timer">Time Left: <span id="timeLeft">60</span> seconds</p>
+
+        <!-- Question Container -->
+        <div id="questionContainer">
+            <h2>Question 1: What is the capital of France?</h2>
+          <div class="options-container">
+                <div class="option" onclick="selectOption(this)">
+                    <input type="radio" name="q0" id="option1" value="Paris">
+                    <label for="option1">Paris</label>
+                </div>
+                <div class="option" onclick="selectOption(this)">
+                    <input type="radio" name="q0" id="option2" value="Berlin">
+                    <label for="option2">Berlin</label>
+                </div>
+                <div class="option" onclick="selectOption(this)">
+                    <input type="radio" name="q0" id="option3" value="Madrid">
+                    <label for="option3">Madrid</label>
+                </div>
+                <div class="option" onclick="selectOption(this)">
+                    <input type="radio" name="q0" id="option4" value="Rome">
+                    <label for="option4">Rome</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+         <br>
+         <br>
+        <div>
+            <button id="backBtn" onclick="prevQuestion()" style="display: none;">Back</button>
+            <button id="nextBtn" onclick="nextQuestion()" style="display: none;">Next</button>
+            <button id="submitBtn" onclick="submitQuiz()" style="display: none;">Submit</button>
+        </div>
+    </div>
+
+    <div id="resultsSection" class="container" style="display: none;">
+        <h1 >Quiz Results</h1>
+        <div id="resultsContainer"></div>
+        <button onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -180,3 +180,23 @@ h1 {
     font-size: 4em; /* Set your desired size for the title */
     text-align: center; /* Center the title */
 }
+/* Base styles (for desktops) */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Styles for tablets */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Styles for mobile phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+
